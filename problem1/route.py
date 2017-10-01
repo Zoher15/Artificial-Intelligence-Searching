@@ -309,7 +309,7 @@ def main():
         distance, totalTime = route[0], route[0] / averageSpeed
         print(distance, " ", totalTime, " ", " ".join(route[2]))
 
-    print("Total time required for the algorithm : ", time.time() - startTime)
+    # print("Total time required for the algorithm : ", time.time() - startTime)
 
     #Pretty print everything
     return 0
