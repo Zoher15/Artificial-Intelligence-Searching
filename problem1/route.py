@@ -295,22 +295,22 @@ def main():
     if(str(routeAlgo) == "bfs"):
         route = findBFS(source,dest,costFunc)
         distance, totalTime = route[0], route[0]/averageSpeed
-        print(distance,totalTime," ".join(x for x in route[2]))
+        print distance,totalTime," ".join(x for x in route[2])
 
     elif(str(routeAlgo) == "dfs"):
         route = findDFS(source, dest, costFunc)
         distance, totalTime = route[0], route[0] / averageSpeed
-        print(distance, totalTime, " ".join(x for x in route[2]))
+        print distance, totalTime, " ".join(x for x in route[2])
 
     elif(str(routeAlgo) == "uniform"):  # Tuple of Distance, SpeedLimit, Path, Haversine, Turns, Time
         route = findUniform(source,dest,costFunc)
         distance, totalTime = route[0], route[0] / averageSpeed
-        print(distance,totalTime, " ".join(x for x in route[2]))
+        print distance,totalTime, " ".join(x for x in route[2])
 
     else:
         route = findAstar(source,dest,costFunc)     # Tuple of Distance, SpeedLimit, Path, Haversine, Turns, Time
         distance, totalTime = route[0], route[0] / averageSpeed
-        print(distance,totalTime," ".join(x for x in route[2]))
+        print distance,totalTime," ".join(x for x in route[2])
 
     # print("Total time required for the algorithm : ", time.time() - startTime)
 
