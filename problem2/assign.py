@@ -32,7 +32,16 @@ the predecessor and then passed again recursively.
 This process continues until the cost of the successor is not less than the cost of the predecessor. At that point we just return the predecessor and declare
 it the goal state. This could be the LOCAL MINIMA and not the GLOBAL MINIMA. But after a lot of trials upto 100 students, I believe my code achieves a fairly
 high balance of running time and final cost. Afterall, time is also another cost in an NP hard problem such as this 
-and I believe my code especially shines in that respect.
+and I believe my code especially shines in that respect:
+
+Taking k=160,m=31,n=10 and for test files students10.txt,students15.txt,students20.txt,students50.txt,students100.txt,students150.txt,students200.txt
+ 10 students:   770  0.01s
+ 15 students:  1218  0.02s
+ 20 students:  1487  0.04s
+ 50 students:  3707  1.1s
+100 students:  7229   44s
+150 students: 10563   2m
+200 students: 13913   8m
 '''
 
 import sys
