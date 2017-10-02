@@ -1,8 +1,6 @@
-# put your 15 puzzle solver here!
 # Name: Melita Dsouza
 # Email: dsouzam@indiana.edu
 # Assignment 1
-#!/usr/bin/env python3
 
 from copy import deepcopy
 import sys
