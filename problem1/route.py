@@ -143,6 +143,8 @@ def findBFS(source,destination,costFunc):
     visited = []
 
     while(fringe):
+        if (str(costFunc) == "longtour"):
+            fringe.sort(key=lambda tup: tup[0], reverse=True)
         successor = fringe.pop(0)
         path = successor[2]
         currentCity = path[-1]
@@ -168,6 +170,8 @@ def findDFS(source,destination,costFunc):
     visited = []
 
     while (fringe):
+        if (str(costFunc) == "longtour"):
+            fringe.sort(key=lambda tup: tup[0], reverse=True)
         successor = fringe.pop()
         path = successor[2]  # Get current city from object that we just popped
         currentCity = path[-1]
@@ -201,7 +205,8 @@ def findUniform(source,destination,costFunc):
             fringe.sort(key=lambda tup: tup[0])
         elif (str(costFunc) == "time"):
             fringe.sort(key=lambda tup: tup[5])
-
+        elif (str(costFunc) == "longtour"):
+            fringe.sort(key=lambda tup: tup[0], reverse=True)
         successor = fringe.pop(0)
         path = successor[2]
         currentCity = path[-1]
@@ -235,6 +240,9 @@ def findAstar(source,destination,costFunc):
             fringe.sort(key=lambda tup: tup[3])
         elif (str(costFunc) == "time"):
             fringe.sort(key=lambda tup: tup[5])
+        elif (str(costFunc) == "longtour"):
+            fringe.sort(key=lambda tup: tup[3], reverse=True)
+
         successor = fringe.pop(0)
         path = successor[2]
         currentCity = path[-1]
