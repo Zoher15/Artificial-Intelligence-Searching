@@ -133,7 +133,7 @@ k = int(sys.argv[2])
 m = int(sys.argv[3])
 n = int(sys.argv[4])
 readAndStore(file)
-print"Loading lesser TIME (in lesser TIME needed to deal with students)....."
+#print"Loading lesser TIME (in lesser TIME needed to deal with students)....."
 goalState=minimizeTime(sorted(studentGroupsList,key=costOfGroup,reverse=True))
 for group in goalState:
 	for student in group:
